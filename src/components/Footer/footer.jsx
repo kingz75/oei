@@ -66,9 +66,15 @@ function Footer() {
                 </p>
               </div>
               <p className="flex gap-2 items-center">
-                <img src={email} alt="Email" className="h-5 w-5" />
-                info@greenworldagrotrade.com
+                <img src={email} alt="Email icon" className="h-5 w-5" />
+                <a
+                  href="mailto:info@greenworldagrotrade.com"
+                  className="hover:text-[#E9AD3D] transition-colors duration-300"
+                >
+                  info@greenworldagrotrade.com
+                </a>
               </p>
+
               <p className="flex gap-2 items-start">
                 <img src={location} alt="Location" className="h-5 w-5 mt-1" />
                 <span>
