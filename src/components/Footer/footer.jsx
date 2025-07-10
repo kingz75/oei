@@ -7,7 +7,7 @@ import location from "../../assets/icons/location.svg";
 
 function Footer() {
   return (
-    <footer className="bg-[url('/src/assets/back/footerbg.png')] bg-center bg-cover px-4 sm:px-8 md:px-16 lg:px-[101px] py-10 lg:py-0">
+    <footer className="lg:bg-[url('/src/assets/back/footerbg.png')] bg-[url('/src/assets/back/footermbg.png')] bg-center bg-cover px-4 sm:px-8 md:px-16 lg:px-[101px] py-10 lg:py-0">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-10 lg:pb-[101px]">
         {/* Logo */}
         <div className="flex  lg:justify-start pt-5 lg:pt-[70px]">
@@ -44,8 +44,11 @@ function Footer() {
             <RouterLink to="/about" className="hover:text-[#E9AD3D]">
               About us
             </RouterLink>
-            <RouterLink to="/contact" className="hover:text-[#E9AD3D]">
+            <RouterLink to="/product" className="hover:text-[#E9AD3D]">
               Product
+            </RouterLink>
+            <RouterLink to="/contact" className="hover:text-[#E9AD3D]">
+              Contact Us
             </RouterLink>
           </div>
 

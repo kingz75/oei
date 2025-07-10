@@ -14,7 +14,7 @@ function Home() {
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-end lg:mt-[68px] mt-8 w-full">
-              <div className="text-white text-sm sm:text-base font-gotham lg:text-[18px] leading-relaxed lg:leading-[40px] pr-0 lg:pr-[250px] [word-spacing:0.1rem] flex-1">
+              <div className="text-[#FFFFFF] text-sm sm:text-base font-gotham lg:text-[18px] leading-relaxed lg:leading-[40px] pr-0 lg:pr-[250px] [word-spacing:0.1rem] flex-1">
                 Your trusted partner in premium agricultural products and
                 commodities trading in the UAE. As a proud affiliate of the
                 renowned Tiamin Group, we bring decades of expertise in rice
@@ -31,9 +31,8 @@ function Home() {
           </div>
 
           <div className="mt-12 lg:mt-[80px]">
-            <div className="border-b border-white"></div>
-            <div className="flex justify-between mt-6 text-white text-sm sm:text-base lg:text-[20px]">
-              <div>Established 2025</div>
+            <div className="border-b border-[#FFFFFF]"></div>
+            <div className="flex justify-center mt-6 text-[#ACACAC] text-sm sm:text-base lg:text-[20px]">
               <div>Explore More Below</div>
             </div>
           </div>

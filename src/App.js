@@ -6,7 +6,7 @@ import Footer from "./components/Footer/footer";
 
 //import About from "./components/About/about";
 //import Contact from "./components/Contact/contact";
-//import Gallery from "./components/Gallery/gallery";
+//import Product from "./components/Product/product";
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/*} <Route path="/about" element={<About />} />
+        {/*}  <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/product" element={<Product />} />
         {/* <Route
 					path="/about"
 					element={<About />}
