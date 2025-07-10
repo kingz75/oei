@@ -33,7 +33,7 @@ function Header() {
   const mobileLinkClasses = ({ isActive }) =>
     isActive
       ? "text-green-700 underline underline-offset-4 decoration-2 font-bold"
-      : "text-black hover:text-green-300";
+      : "text-[#151515] hover:text-green-300";
 
   const handleLogoClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
