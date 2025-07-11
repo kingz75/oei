@@ -10,7 +10,7 @@ function Sustain() {
         {/* Heading */}
         <div className="lg:text-center lg:pl-0 pl-2">
           <h2 className="font-bold text-white text-2xl sm:text-3xl lg:text-4xl">
-            SUSTAIN <span className="text-[#E9AD3D]">ABILITY</span>
+            SUSTAIN<span className="text-[#E9AD3D]">ABILITY</span>
           </h2>
           <p className="text-white mt-3 text-xs sm:text-sm lg:text-lg">
             We are committed to sustainable agricultural practices:

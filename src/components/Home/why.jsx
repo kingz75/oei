@@ -9,8 +9,8 @@ function Why() {
     <div className="bg-[url('/src/assets/back/whybg.png')] bg-center bg-cover px-4 lg:px-[101px] py-12 lg:py-[101px]">
       <div className="max-w-7xl mx-auto">
         <div className=" lg:text-center lg:pl-0 pl-2">
-          <h2 className="text-[24px] lg:text-[40px] font-medium text-[#174B24]">
-            Why <span className="text-[#940202] mx-2">Choose</span> Us?
+          <h2 className="text-[24px] lg:text-[40px] font-semibold text-[#174B24]">
+            Why <span className="text-[#940202] mx-[0.5px]">Choose</span> Us?
           </h2>
           <p className="mt-3 lg:mt-6 text-[16px] lg:text-[20px] leading-[28px] lg:leading-[40px] text-[#555555]">
             Rigorous quality control standards aligned with international

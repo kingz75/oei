@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Why from "../Home/why.jsx";
 import Sustain from "../Home/sustain.jsx";
 
@@ -23,9 +24,12 @@ function Home() {
               </div>
 
               <div className="pt-6 lg:pt-0">
-                <button className="text-sm sm:text-base lg:text-[16px] font-semibold px-6 py-3 bg-[#174B24] text-white rounded hover:bg-green-800 transition rounded-br-[60px] rounded-bl-[60px] rounded-tr-[60px] mt-4 lg:mt-0">
-                  Our Services
-                </button>
+                <Link
+                  to="/contact"
+                  className="inline-block text-sm sm:text-base lg:text-[16px] font-semibold px-6 py-3 bg-[#174B24] text-white rounded hover:bg-green-800 transition rounded-br-[60px] rounded-bl-[60px] rounded-tr-[60px] mt-4 lg:mt-0"
+                >
+                  Contact Us
+                </Link>
               </div>
             </div>
           </div>

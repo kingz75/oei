@@ -4,9 +4,9 @@ import Header from "./components/Header/header";
 import Home from "./components/Home/home";
 import Footer from "./components/Footer/footer";
 
-//import About from "./components/About/about";
-//import Contact from "./components/Contact/contact";
-//import Product from "./components/Product/product";
+import About from "./components/About/about";
+import Contact from "./components/Contact/contact";
+import Product from "./components/Product/product";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/*}  <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product" element={<Product />} />
         {/* <Route
