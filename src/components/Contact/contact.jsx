@@ -17,7 +17,7 @@ function Contact() {
             <span className="relative z-10">Contact Us</span>
             <span className="absolute left-1/2 -translate-x-1/2 bottom-[-10px] w-24 sm:w-36 md:w-[170px] h-1.5 bg-[#E9AD3D] rounded-full"></span>
           </div>
-          <div>
+          <div className="lg:block hidden">
             <h3 className="text-[20px] sm:text-[24px] font-bold text-[#292929]">
               Work Hours
             </h3>
@@ -29,7 +29,7 @@ function Contact() {
             </p>
           </div>
 
-          <div>
+          <div className="lg:block hidden">
             <h3 className="text-[20px] sm:text-[24px] font-bold text-[#292929]">
               Our Location
             </h3>
@@ -43,7 +43,7 @@ function Contact() {
 
         {/* Right Side - Form */}
         <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8">
-          <h2 className="text-xl sm:text-2xl font-semibold text-[#292929] mb-6">
+          <h2 className="text-[20px] sm:text-2xl font-semibold text-[#3E3D3D] mb-6">
             Drop a Message
           </h2>
 
@@ -140,6 +140,29 @@ function Contact() {
               </button>
             </div>
           </form>
+        </div>
+        <div className="lg:hidden leading-[36px]">
+          <div>
+            <h3 className="text-[20px] sm:text-[24px] font-bold text-[#292929]">
+              Work Hours
+            </h3>
+            <p className="text-[#292929] mt-2 text-[18px] sm:text-[20px]">
+              Monday - Friday
+            </p>
+            <p className="text-[#292929] text-[18px] sm:text-[20px]">
+              09:00 AM to 06:00 PM (WAT)
+            </p>
+          </div>
+          <div className="mt-6">
+            <h3 className="text-[20px] sm:text-[24px] font-bold text-[#292929]">
+              Our Location
+            </h3>
+            <p className="text-[#292929] mt-2 text-[18px] sm:text-[20px]">
+              402, Sheikh Building Near Al Ansari Exchange,
+              <br />
+              Naif Road, Deira, Dubai, UAE
+            </p>
+          </div>
         </div>
       </div>
     </div>
