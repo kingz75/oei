@@ -9,7 +9,7 @@ function About() {
       <section className="bg-[url('/src/assets/back/whybg.png')] bg-center bg-cover lg:pb-16 pt-28 lg:pt-[200px] px-4 sm:px-6 md:px-10 lg:px-[70px]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[20px] items-start">
           {/* LEFT SIDE */}
-          <div className="pt-6 md:pt-[35px]">
+          <div className="pt-6 md:pt-[33px]">
             {/* Section Title */}
             <div className="flex lg:justify-center pb-8 md:pb-[55px]">
               <div className="relative inline-block text-[#182948] text-2xl sm:text-3xl md:text-[32px] font-medium">

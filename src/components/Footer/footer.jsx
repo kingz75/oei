@@ -10,12 +10,17 @@ function Footer() {
     <footer className="lg:bg-[url('/src/assets/back/footerbg.png')] bg-[url('/src/assets/back/footermbg.png')] bg-center bg-cover px-4 sm:px-8 md:px-16 lg:px-[101px] py-10 lg:py-0">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-10 lg:pb-[101px]">
         {/* Logo */}
-        <div className="flex  lg:justify-start pt-5 lg:pt-[70px]">
-          <img
-            src={mainicond}
-            alt="Green World Agro Logo"
-            className="h-10 w-auto"
-          />
+        <div className="flex lg:justify-start pt-5 lg:pt-[70px]">
+          <RouterLink
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            <img
+              src={mainicond}
+              alt="Green World Agro Logo"
+              className="h-10 w-auto cursor-pointer"
+            />
+          </RouterLink>
         </div>
 
         {/* Main content grid */}

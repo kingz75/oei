@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import p1 from "../../assets/images/p1.png";
 import p2 from "../../assets/images/p2.png";
 import p3 from "../../assets/images/p3.png";
@@ -60,7 +61,7 @@ const PRODUCTS = [
 
 function About() {
   return (
-    <div className="bg-[url('/src/assets/back/whybg.png')] bg-center bg-cover px-4 pb-[0px] pt-[110px] sm:px-8 md:px-16 lg:px-[101px] lg:pt-[200px] lg:pb-[]">
+    <div className="bg-[url('/src/assets/back/whybg.png')] bg-center bg-cover px-4 pb-[0px] pt-[110px] sm:px-8 md:px-16 lg:px-[101px] lg:pt-[200px]">
       <div className="max-w-7xl mx-auto">
         {/* Section title */}
         <div className="flex justify-center pb-10">
@@ -71,50 +72,66 @@ function About() {
         </div>
 
         {/* Product blocks */}
-        {PRODUCTS.map((product, index) => (
-          <div
-            key={product.id}
-            className={`flex flex-col md:flex-row ${
-              index % 2 !== 0 ? "md:flex-row-reverse" : ""
-            } items-center gap-8 md:gap-10 pb-[50px]`}
-          >
-            {/* Text content */}
-            <div className="relative md:w-1/2 w-full">
-              <div className="absolute lg:-top-14  -top-6 opacity-10 text-6xl sm:text-7xl md:text-8xl font-medium text-[#182948]">
-                {product.id}
-              </div>
-              <div className="text-[24px]  mb-4 font-medium text-[#182948]">
-                {product.title}
-              </div>
-              <div className="text-[16px] lg:text-[20px] sm:text-lg text-[#555555]">
-                {product.bullets.map((bullet, idx) => (
-                  <div
-                    key={idx}
-                    className={`flex items-start gap-2 sm:gap-3 ${
-                      idx !== product.bullets.length - 1 ? "mb-4" : ""
-                    } leading-[28px] lg:leading-[36px]`}
-                  >
-                    <img
-                      src={picon}
-                      alt="bullet icon"
-                      className="w-4 sm:w-5 mt-1"
-                    />
-                    <p>{bullet}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+        {PRODUCTS.map((product, index) => {
+          const slideDirection = index % 2 === 0 ? -100 : 100;
 
-            {/* Image */}
-            <div className="w-full md:w-1/2">
-              <img
-                src={product.image}
-                alt={product.alt}
-                className="w-full h-auto rounded- object-cover"
-              />
+          return (
+            <div
+              key={product.id}
+              className={`flex flex-col md:flex-row ${
+                index % 2 !== 0 ? "md:flex-row-reverse" : ""
+              } items-center gap-8 md:gap-10 pb-[50px]`}
+            >
+              {/* Text content */}
+              <div className="relative md:w-1/2 w-full">
+                <div className="absolute lg:-top-14  -top-6 opacity-10 text-6xl sm:text-7xl md:text-8xl font-medium text-[#182948]">
+                  {product.id}
+                </div>
+                <div className="text-[24px] mb-4 font-medium text-[#182948]">
+                  {product.title}
+                </div>
+                <div className="text-[16px] lg:text-[20px] sm:text-lg text-[#555555]">
+                  {product.bullets.map((bullet, idx) => (
+                    <div
+                      key={idx}
+                      className={`flex items-start gap-2 sm:gap-3 ${
+                        idx !== product.bullets.length - 1 ? "mb-4" : ""
+                      } leading-[28px] lg:leading-[36px]`}
+                    >
+                      <img
+                        src={picon}
+                        alt="bullet icon"
+                        className="w-4 sm:w-5 mt-1"
+                      />
+                      <p>{bullet}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Animated Image */}
+              <motion.div
+                className="w-full md:w-1/2"
+                initial={{ opacity: 0, x: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  x: [0, window.innerWidth >= 768 ? slideDirection : 0, 0],
+                }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                <img
+                  src={product.image}
+                  alt={product.alt}
+                  className="w-full h-auto rounded object-cover"
+                />
+              </motion.div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

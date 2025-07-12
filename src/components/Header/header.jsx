@@ -75,7 +75,7 @@ function Header() {
               Home
             </NavLink>
             <NavLink to="/about" className={linkClasses}>
-              About&nbsp;us
+              About&nbsp;Us
             </NavLink>
             <NavLink to="/product" className={linkClasses}>
               Product

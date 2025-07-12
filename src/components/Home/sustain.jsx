@@ -1,9 +1,28 @@
 import React from "react";
+import { motion } from "framer-motion";
 import sustain1 from "../../assets/images/sustain1.png";
 import sustain2 from "../../assets/images/sustain2.png";
 import sustain3 from "../../assets/images/sustain3.png";
 
 function Sustain() {
+  // Animation variants
+  const getVariants = (direction) => ({
+    hidden: {
+      opacity: 0,
+      x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
+      y: direction === "up" ? 100 : 0,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  });
+
   return (
     <div className="bg-[url('/src/assets/back/sustainbg.png')] bg-center bg-cover lg:h-[716px] w-full lg:px-[101px] px-4 py-12">
       <div className="max-w-[1400px] mx-auto">
@@ -20,13 +39,19 @@ function Sustain() {
         {/* Cards */}
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {/* Card 1 */}
-          <div className="relative w-full aspect-[4/5] overflow-hidden rounded-lg">
+          <motion.div
+            className="relative w-full aspect-[4/5] overflow-hidden rounded-lg"
+            variants={getVariants("up")}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <img
               src={sustain1}
               alt="Rice Husk Briquettes"
               className="object-cover w-full h-full"
             />
-            <div className="absolute inset-0  flex flex-col justify-end p-4 sm:p-6">
+            <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6">
               <h3 className="text-white font-bold text-lg sm:text-xl mb-2">
                 Rice Husk Briquettes
               </h3>
@@ -35,16 +60,22 @@ function Sustain() {
                 reducing waste, supporting green initiatives.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 2 */}
-          <div className="relative w-full aspect-[4/5] overflow-hidden rounded-lg">
+          <motion.div
+            className="relative w-full aspect-[4/5] overflow-hidden rounded-lg"
+            variants={getVariants("up")}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <img
               src={sustain2}
               alt="Traceable Supply Chains"
               className="object-cover w-full h-full"
             />
-            <div className="absolute inset-0  flex flex-col justify-end p-4 sm:p-6">
+            <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6">
               <h3 className="text-white font-bold text-lg sm:text-xl mb-2">
                 Traceable Supply Chains
               </h3>
@@ -53,16 +84,22 @@ function Sustain() {
                 from farm to market.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 3 */}
-          <div className="relative w-full aspect-[4/5] overflow-hidden rounded-lg">
+          <motion.div
+            className="relative w-full aspect-[4/5] overflow-hidden rounded-lg"
+            variants={getVariants("up")}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <img
               src={sustain3}
               alt="Farmer Partnerships"
               className="object-cover w-full h-full"
             />
-            <div className="absolute inset-0  flex flex-col justify-end p-4 sm:p-6">
+            <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6">
               <h3 className="text-white font-bold text-lg sm:text-xl mb-2">
                 Farmer Partnerships
               </h3>
@@ -71,7 +108,7 @@ function Sustain() {
                 trade practices.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

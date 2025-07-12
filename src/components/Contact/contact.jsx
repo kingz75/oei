@@ -86,12 +86,13 @@ function Contact() {
                   <option value="+44">🇬🇧 +44</option>
                   <option value="+1">🇺🇸 +1</option>
                   <option value="+966">🇸🇦 +966</option>
+                  <option value="+">others</option>
                 </select>
                 <input
                   type="tel"
                   id="phone"
                   required
-                  placeholder="8012345678"
+                  placeholder="Enter number"
                   className="flex-1 border border-gray-300 rounded-r px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#1B3764]"
                 />
               </div>
