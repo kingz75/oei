@@ -1,11 +1,59 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const [countryCode, setCountryCode] = useState("+234");
+  const [formData, setFormData] = useState({
+    fullname: "",
+    phone: "",
+    company: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Selected country code:", countryCode);
+
+    const templateParams = {
+      fullname: formData.fullname,
+      phone: `${countryCode} ${formData.phone}`,
+      company: formData.company,
+      message: formData.message,
+      to_email: formData.email, // or whatever field has user's email
+    };
+
+    emailjs
+      .send(
+        "service_278rmra", // e.g. service_abc123
+        "template_1qp7k8p", // e.g. template_xyz456
+        templateParams,
+        "SMZLIV-KQvRGqBwgF" // e.g. abcDEF12345
+      )
+
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+          setFormData({
+            fullname: "",
+            phone: "",
+            company: "",
+            message: "",
+          });
+          setCountryCode("+234");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("An error occurred. Please try again.");
+        }
+      );
   };
 
   return (
@@ -21,10 +69,10 @@ function Contact() {
             <h3 className="text-[20px] sm:text-[24px] font-bold text-[#292929]">
               Work Hours
             </h3>
-            <p className="text-[#292929] mt-2 text-[18px] sm:text-[20px]">
+            <p className="text-[#292929] mt-2 text-[18px] lg:text-[20px]">
               Monday - Friday
             </p>
-            <p className="text-[#292929] text-[18px] sm:text-[20px]">
+            <p className="text-[#292929] text-[18px] lg:text-[20px]">
               09:00 AM to 06:00 PM (WAT)
             </p>
           </div>
@@ -33,7 +81,7 @@ function Contact() {
             <h3 className="text-[20px] sm:text-[24px] font-bold text-[#292929]">
               Our Location
             </h3>
-            <p className="text-[#292929] mt-2 text-[18px] sm:text-[20px]">
+            <p className="text-[#292929] mt-2 text-[18px] lg:text-[20px]">
               402, Sheikh Building Near Al Ansari Exchange,
               <br />
               Naif Road, Deira, Dubai, UAE
@@ -60,8 +108,10 @@ function Contact() {
                 type="text"
                 id="fullname"
                 required
+                value={formData.fullname}
+                onChange={handleChange}
                 placeholder="Enter full name"
-                className="w-full border border-gray-300 rounded px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#1B3764]"
+                className="w-full border border-gray-300 rounded px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#292929]"
               />
             </div>
 
@@ -79,7 +129,7 @@ function Contact() {
                   name="countryCode"
                   value={countryCode}
                   onChange={(e) => setCountryCode(e.target.value)}
-                  className="w-[100px] border border-gray-300 bg-gray-100 rounded-l px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#1B3764]"
+                  className="w-[100px] border border-gray-300 bg-gray-100 rounded-l px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#292929]"
                 >
                   <option value="+234">🇳🇬 +234</option>
                   <option value="+971">🇦🇪 +971</option>
@@ -92,8 +142,10 @@ function Contact() {
                   type="tel"
                   id="phone"
                   required
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="Enter number"
-                  className="flex-1 border border-gray-300 rounded-r px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#1B3764]"
+                  className="flex-1 border border-gray-300 rounded-r px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#292929]"
                 />
               </div>
             </div>
@@ -109,8 +161,10 @@ function Contact() {
               <input
                 type="text"
                 id="company"
+                value={formData.company}
+                onChange={handleChange}
                 placeholder="Enter company name"
-                className="w-full border border-gray-300 rounded px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#1B3764]"
+                className="w-full border border-gray-300 rounded px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#292929]"
               />
             </div>
 
@@ -126,8 +180,10 @@ function Contact() {
               <textarea
                 id="message"
                 rows="4"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Type more message"
-                className="w-full border border-gray-300 rounded px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#1B3764]"
+                className="w-full border border-gray-300 rounded px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#292929]"
               ></textarea>
             </div>
 
@@ -142,6 +198,8 @@ function Contact() {
             </div>
           </form>
         </div>
+
+        {/* Mobile Location & Work Hours */}
         <div className="lg:hidden leading-[36px]">
           <div>
             <h3 className="text-[20px] sm:text-[24px] font-bold text-[#292929]">

@@ -81,7 +81,7 @@ function Header() {
               Product
             </NavLink>
             <NavLink to="/contact" className={linkClasses}>
-              Contact&nbsp;us
+              Contact&nbsp;Us
             </NavLink>
           </div>
         </div>
@@ -110,7 +110,7 @@ function Header() {
                   className={mobileLinkClasses}
                   onClick={toggleMenu}
                 >
-                  About us
+                  About Us
                 </NavLink>
                 <NavLink
                   to="/product"

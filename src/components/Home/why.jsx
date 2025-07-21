@@ -26,11 +26,11 @@ function Why() {
               className="w-[64px] lg:w-[106px]"
             />
             <h3 className="mt-8 text-[14px] lg:text-[16px] font-semibold text-[#333333] font-gotham ">
-              Parent Company Backing
+              Quality Assurance
             </h3>
             <p className="mt-4 text-[14px] lg:text-[14px] leading-[28px] font-gotham">
-              Benefit from the expertise and resources of Tiamin Group, a leader
-              in agro-processing and commodity trading.
+              Rigorous quality control standards aligned with international
+              certifications.
             </p>
           </div>
 
@@ -56,11 +56,12 @@ function Why() {
               className="w-[64px] lg:w-[106px]"
             />
             <h3 className="mt-8 text-[14px] lg:text-[16px] font-semibold text-[#333333] font-gotham">
-              Diverse Product Range
+              Diverse Product and Service Range
             </h3>
             <p className="mt-4 text-[14px] lg:text-[14px] leading-[28px] font-gotham">
-              From premium rice to organic hibiscus and essential oil seeds, we
-              cover a broad spectrum of agro commodities.
+              From premium rice to organic hibiscus, ginger, essential oil
+              seeds, and advanced agricultural machinery, we cover a broad
+              spectrum of agro commodities and mechanized solutions.
             </p>
           </div>
 

@@ -5,7 +5,7 @@ import abicon from "../../assets/icons/abicon.svg";
 
 function Mission() {
   return (
-    <div className="bg-[url('/src/assets/back/whybg.png')] bg-center bg-cover px-4 sm:px-8 md:px-12 lg:px-[101px] pb-8 sm:py-12 md:py-16 lg:py-[50px]">
+    <div className="bg-[url('/src/assets/back/whybg.png')] bg-center bg-cover px-4 sm:px-8 md:px-12 lg:px-[120px] pb-8 sm:py-12 md:py-16 lg:py-[50px]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px]">
           {/* Left side */}

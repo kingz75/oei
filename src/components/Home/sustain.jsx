@@ -104,8 +104,10 @@ function Sustain() {
                 Farmer Partnerships
               </h3>
               <p className="text-white text-xs sm:text-sm leading-relaxed">
-                Supporting rural communities and empowering farmers through fair
-                trade practices.
+                Supporting rural communities and empowering smallholder farmers
+                through fair trade practices and sustainable in-grower schemes,
+                including training in GAP and the use of solar-powered
+                irrigation systems
               </p>
             </div>
           </motion.div>

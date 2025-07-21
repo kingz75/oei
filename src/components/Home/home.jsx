@@ -16,12 +16,13 @@ function Home() {
             </div>
 
             <div className="flex flex-col lg:flex-row lg:items-end lg:mt-[68px] mt-8 w-full">
-              <div className="text-[#FFFFFF] text-sm font- sm:text-base font-gotham lg:text-[18px] leading-relaxed lg:leading-[40px] pr-0 lg:pr-[250px] [word-spacing:0.1rem] flex-1">
-                Your trusted partner in premium agricultural products and
-                commodities trading in the UAE. As a proud affiliate of the
-                renowned Tiamin Group, we bring decades of expertise in rice
-                processing, sustainable agro-products, and international
-                agricultural commodity trading to the heart of Dubai.
+              <div className="text-[#FFFFFF] text-sm font- sm:text-base  lg:text-[18px] leading-relaxed lg:leading-[40px] pr-0 lg:pr-[250px] [word-spacing:0.1rem] flex-1 ">
+                Your trusted partner in premium agricultural products,
+                machinery, and commodities trading in the UAE. As a proud
+                affiliate of the renowned Tiamin Group, we bring decades of
+                expertise in rice processing, sustainable agro-products,
+                agricultural machinery, and international agricultural commodity
+                trading to the heart of Dubai.
               </div>
 
               <motion.div
