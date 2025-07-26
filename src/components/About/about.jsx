@@ -1,5 +1,6 @@
 import React from "react";
 import { HiOutlineLink } from "react-icons/hi";
+import { motion } from "framer-motion";
 import zitaj from "../../assets/images/zitaj.png";
 import sufpay from "../../assets/images/sufpay.png";
 import agro from "../../assets/images/agro.png";
@@ -38,14 +39,24 @@ function About() {
     <div>
       {/* Desktop View */}
       <div className="hidden lg:block bg-cover bg-center py-[120px] px-[80px] bg-[url('/src/assets/back/workbg.png')]">
-        <div className="text-[64px] font-extrabold text-white mb-[48px]">
+        <motion.h2
+          className="text-[64px] font-extrabold text-white mb-[48px]"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           Some Of Our Work
-        </div>
+        </motion.h2>
 
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
             className="bg-cover bg-[url('/src/assets/back/works.png')] px-[48px] pt-[60px] rounded-[32px] mt-[40px]"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: index * 0.2 }}
           >
             <div className="flex justify-between mb-[30px]">
               <div className="text-[40px] font-extrabold text-white">
@@ -63,10 +74,18 @@ function About() {
                 </a>
               </div>
             </div>
-            <div className="grid place-items-center">
-              <img src={project.image} alt={`${project.title} project`} />
-            </div>
-          </div>
+            <motion.div
+              className="grid place-items-center"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <img
+                src={project.image}
+                alt={`${project.title} project`}
+                className="rounded-xl shadow-xl"
+              />
+            </motion.div>
+          </motion.div>
         ))}
       </div>
 
