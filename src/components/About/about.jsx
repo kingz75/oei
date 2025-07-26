@@ -12,25 +12,25 @@ const projects = [
     title: "Automobile",
     image: zitaj,
     link: "https://zitajautomobile.com",
-    domain: "Zitajautomobile.com",
+    domain: "Zitajautomobile",
   },
   {
     title: "Fintech",
     image: sufpay,
     link: "https://sufpay.com",
-    domain: "Sufpay.com",
+    domain: "SufPay",
   },
   {
     title: "Agriculture",
     image: agro,
-    link: "https://greenworldagro.com",
-    domain: "Greenworldagro.com",
+    link: "https://greenworldagrotrade.com",
+    domain: "Greenworldagrotrade",
   },
   {
     title: "E-Commerce",
     image: cloth,
     link: "https://azbirclothing.com",
-    domain: "Azbirclothing.com",
+    domain: "Azbirclothing",
   },
 ];
 

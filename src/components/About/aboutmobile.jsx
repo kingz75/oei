@@ -11,25 +11,25 @@ const mobileProjects = [
     title: "Automobile",
     image: zitajm,
     link: "https://zitajautomobile.com",
-    domain: "Zitajautomobile.com",
+    domain: "Zitajautomobile",
   },
   {
     title: "Fintech",
     image: sufpaym,
     link: "https://sufpay.com",
-    domain: "Sufpay.com",
+    domain: "SufPay",
   },
   {
     title: "Agriculture",
     image: agrom,
     link: "https://greenworldagro.com",
-    domain: "Greenworldagro.com",
+    domain: "Greenworldagrotrade",
   },
   {
     title: "E-Commerce",
     image: clothm,
     link: "https://azbirclothing.com",
-    domain: "Azbirclothing.com",
+    domain: "Azbirclothing",
   },
 ];
 

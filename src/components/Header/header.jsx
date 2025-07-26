@@ -58,7 +58,7 @@ function Header() {
             Our Work
           </NavLink>
           <a
-            href="https://wa.me/2349012345678" // Replace with your actual WhatsApp number
+            href="https://wa.me/2349034490978" // Replace with your actual WhatsApp number
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#FCE803] hover:bg-[#FCE80320] text-[#17191E] hover:text-[#FCE803] rounded-[50px] py-[12px] lg:py-[20px] px-[40px] w-full lg:w-auto transition duration-300 text-center"
@@ -87,7 +87,7 @@ function Header() {
                 Our Work
               </NavLink>
               <a
-                href="https://wa.me/2349012345678" // Replace with your actual WhatsApp number
+                href="https://wa.me/2349034490978" // Replace with your actual WhatsApp number
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#FCE803] hover:bg-[#FCE80320] text-[#17191E] hover:text-[#FCE803] rounded-[50px] py-[12px] lg:py-[20px] px-[40px] w-full lg:w-auto transition duration-300 text-center"

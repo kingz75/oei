@@ -10,7 +10,7 @@ function Design2() {
 
   const Button = () => (
     <a
-      href="https://wa.me/2349012345678" // Replace with your actual WhatsApp number
+      href="https://wa.me/2349034490978" // Replace with your actual WhatsApp number
       target="_blank"
       rel="noopener noreferrer"
     >
