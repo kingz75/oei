@@ -17,13 +17,13 @@ const projects = [
   {
     title: "Fintech",
     image: sufpay,
-    link: "https://sufpay.com",
+    link: "https://sufpay.ng",
     domain: "SufPay",
   },
   {
     title: "Agriculture",
     image: agro,
-    link: "https://greenworldagrotrade.com",
+    link: "https://https://www.greenworldagrotrade.com/",
     domain: "Greenworldagrotrade",
   },
   {

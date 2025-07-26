@@ -16,13 +16,13 @@ const mobileProjects = [
   {
     title: "Fintech",
     image: sufpaym,
-    link: "https://sufpay.com",
+    link: "https://sufpay.ng",
     domain: "SufPay",
   },
   {
     title: "Agriculture",
     image: agrom,
-    link: "https://greenworldagro.com",
+    link: "https://greenworldagrotrade.com",
     domain: "Greenworldagrotrade",
   },
   {
