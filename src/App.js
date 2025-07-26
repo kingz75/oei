@@ -5,20 +5,22 @@ import Home from "./components/Home/home";
 import Footer from "./components/Footer/footer";
 
 import About from "./components/About/about";
-import Contact from "./components/Contact/contact";
-import Product from "./components/Product/product";
+//import Contact from "./components/Contact/contact";
+//import Product from "./components/Product/product";
 import ScrollToTop from "./components/ScrollToTop.js";
+import FacebookPixel from "./components/FacebookPixel";
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <FacebookPixel />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/product" element={<Product />} />
+        {/*}<Route path="/contact" element={<Contact />} />
+         <Route path="/product" element={<Product />} />
         {/* <Route
 					path="/about"
 					element={<About />}

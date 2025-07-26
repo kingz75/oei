@@ -1,57 +1,72 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Why from "../Home/why.jsx";
-import Sustain from "../Home/sustain.jsx";
-import { motion } from "framer-motion";
+import groupm from "../../assets/images/Groupimagem.png";
+import group from "../../assets/images/Groupimage.png";
+import homeicon from "../../assets/icons/homeicon.svg";
+import briefcase from "../../assets/icons/briefcase.svg";
+import watsap from "../../assets/icons/watsap.svg";
+import Design from "../Home/design.jsx";
 
 function Home() {
   return (
     <div>
-      <div className="bg-[url('/src/assets/back/homebg.png')] bg-cover bg-center min-h-screen flex items-end justify-center px-4 sm:px-6 lg:px-[101px] pb-8 sm:pb-10 lg:pb-[64px]">
-        <div className="w-full max-w-7xl flex flex-col justify-between h-full py-10 sm:py-16 lg:py-0">
-          <div>
-            <div className="font-bold font-gotham text-white text-2xl sm:text-3xl md:text-4xl lg:text-[48px] leading-snug sm:leading-tight lg:leading-[50px] pt-32 sm:pt-48 lg:pt-[350px] max-w-[90%] sm:max-w-[80%] [word-spacing:0.25rem]">
-              Welcome to <span className="text-[#B8FF29]">Green World</span>{" "}
-              Agro General Trading L.L.C
-            </div>
+      <section className="relative h-screen bg-no-repeat bg-cover lg:bg-center pt-[100px] px-[16px] lg:px-0 lg:bg-[url('/src/assets/back/homebg.png')] bg-[url('/src/assets/back/homebgm.png')]">
+        <div className="flex flex-col justify-between items-center text-center h-full">
+          {/* Logo */}
+          <div className="w-[264px] lg:w-auto">
+            <img src={homeicon} alt="Home Icon" />
+          </div>
 
-            <div className="flex flex-col lg:flex-row lg:items-end lg:mt-[68px] mt-8 w-full">
-              <div className="text-[#FFFFFF] text-sm font- sm:text-base  lg:text-[18px] leading-relaxed lg:leading-[40px] pr-0 lg:pr-[250px] [word-spacing:0.1rem] flex-1 ">
-                Your trusted partner in premium agricultural products,
-                machinery, and commodities trading in the UAE. As a proud
-                affiliate of the renowned Tiamin Group, we bring decades of
-                expertise in rice processing, sustainable agro-products,
-                agricultural machinery, and international agricultural commodity
-                trading to the heart of Dubai.
-              </div>
+          {/* Headline */}
+          <h1 className="text-white font-extrabold text-[32px] lg:text-[64px] pt-[32px] lg:pt-5 px-4 lg:px-[200px]">
+            Build a website that speaks, engages, and converts!
+          </h1>
 
-              <motion.div
-                className="pt-6 lg:pt-0"
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+          {/* CTA Buttons */}
+          <div className="flex justify-center w-full pt-[40px] lg:pt-5">
+            <div className="flex flex-col-reverse lg:flex-row items-center gap-[16px] w-full max-w-[500px]">
+              <Link
+                to="/about"
+                className="bg-[#FFFFFF24] hover:bg-[#ffffff48] text-white rounded-[50px] py-[12px] lg:py-[20px] px-[40px] w-full lg:w-auto transition duration-300 text-center"
               >
-                <Link
-                  to="/contact"
-                  className="inline-block text-sm sm:text-base lg:text-[16px] font-semibold px-6 py-3 bg-[#174B24] text-white rounded hover:bg-green-800 transition rounded-br-[60px] rounded-bl-[60px] rounded-tr-[60px] mt-4 lg:mt-0"
-                >
+                <button className="flex items-center justify-center gap-2 w-full">
+                  <img src={briefcase} alt="Briefcase Icon" />
+                  Our Work
+                </button>
+              </Link>
+
+              <a
+                href="https://wa.me/2349012345678" // Replace with your actual WhatsApp number
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#FCE803] hover:bg-[#FCE80320] text-[#17191E] hover:text-[#FCE803] rounded-[50px] py-[12px] lg:py-[20px] px-[40px] w-full lg:w-auto transition duration-300 text-center"
+              >
+                <div className="flex items-center justify-center gap-2 w-full">
+                  <img src={watsap} alt="WhatsApp Icon" />
                   Contact Us
-                </Link>
-              </motion.div>
+                </div>
+              </a>
             </div>
           </div>
 
-          <div className="mt-12 lg:mt-[80px]">
-            <div className="border-b border-[#FFFFFF]"></div>
-            <div className="flex justify-center mt-6 text-[#ACACAC] text-sm sm:text-base lg:text-[20px]">
-              <div>Explore More Below</div>
-            </div>
+          {/* Illustrations */}
+          <div className="mt-[25px]">
+            <img
+              src={group}
+              alt="Group Illustration"
+              className="hidden lg:block"
+            />
+            <img
+              src={groupm}
+              alt="Mobile Group Illustration"
+              className="block lg:hidden"
+            />
           </div>
         </div>
-      </div>
+      </section>
 
-      <Why />
-      <Sustain />
+      {/* Design Component */}
+      <Design />
     </div>
   );
 }
