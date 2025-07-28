@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import watsap from "../../assets/icons/watsapw.svg";
 import promo from "../../assets/icons/promoicon.svg";
 import mark from "../../assets/icons/mark.svg";
@@ -71,18 +72,34 @@ const packages = [
   },
 ];
 
-function PriceCard({ pkg }) {
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  show: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay, duration: 0.6, ease: "easeOut" },
+  }),
+};
+
+function PriceCard({ pkg, index }) {
   return (
-    <div className="bg-[url('/src/assets/back/pricebg.png')] rounded-3xl bg-center bg-cover bg-no-repeat w-full lg:px-[48px] px-5 py-5 lg:py-[81px] relative mt-5 lg:mt-0">
+    <motion.div
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      custom={index * 0.2}
+      className="bg-[url('/src/assets/back/pricebg.png')] rounded-3xl bg-center bg-cover bg-no-repeat w-full lg:px-[48px] px-5 py-5 lg:py-[81px] relative mt-5 lg:mt-0"
+    >
       <div className="absolute top-5 right-5 lg:static mb-3 lg:mb-0 lg:hidden">
         <img src={promo} alt="Promo Icon" className="w-[80px]" />
       </div>
 
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between ">
         <h2 className="text-white font-extrabold text-[24px] lg:text-[32px]">
           {pkg.title}
         </h2>
-        <div className="lg:block hidden">
+        <div className="lg:block hidden place-items-start">
           <img src={promo} alt="Promo" />
         </div>
       </div>
@@ -109,7 +126,7 @@ function PriceCard({ pkg }) {
         ))}
       </div>
 
-      <div className="mt-9">
+      <motion.div whileHover={{ scale: 1.05 }} className="mt-9">
         <a
           href="https://wa.me/2348127574208"
           target="_blank"
@@ -120,15 +137,21 @@ function PriceCard({ pkg }) {
             Contact Us
           </button>
         </a>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 
 function Price() {
   return (
     <section className="bg-cover bg-center lg:py-[104px] pb-[80px] pt-[100px] px-[16px] lg:px-[80px] lg:bg-[url('/src/assets/back/bgimage.png')] bg-[url('/src/assets/back/bgimagem.png')]">
-      <div className="text-center">
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={fadeUp}
+        className="text-center"
+      >
         <img src={priceicon} alt="Price Icon" className="mx-auto" />
         <div className="font-bold lg:text-[48px] text-[32px] text-[#FCE803] lg:mt-[40px] mt-[20px]">
           “Get Up to ₦100,000 OFF – Limited Time”
@@ -136,17 +159,17 @@ function Price() {
         <div className="lg:text-[32px] text-[22px] font-semibold text-[#ffffff] lg:mt-[30px] mt-[15px] lg:mb-[60px] mb-[30px]">
           Choose Package That Suit Your Business
         </div>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
         {packages.slice(0, 2).map((pkg, index) => (
-          <PriceCard key={index} pkg={pkg} />
+          <PriceCard key={index} pkg={pkg} index={index} />
         ))}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:mt-9">
         {packages.slice(2).map((pkg, index) => (
-          <PriceCard key={index} pkg={pkg} />
+          <PriceCard key={index + 2} pkg={pkg} index={index + 2} />
         ))}
       </div>
     </section>
