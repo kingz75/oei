@@ -25,7 +25,11 @@ function Design3() {
       rel="noopener noreferrer"
     >
       <button className="flex items-center gap-2 bg-[#FCE803] text-[#17191E] hover:bg-[#FCE80320] hover:text-[#FCE803] px-8 py-4 rounded-full text-[16px] font-bold shadow-lg transition duration-300">
-        <img src={watsap} alt="WhatsApp Icon" />
+        <img
+          src={watsap}
+          alt="WhatsApp Icon "
+          className="hover:text-[#FCE803] text-[#FCE803]"
+        />
         Contact Us
       </button>
     </a>
@@ -40,7 +44,7 @@ function Design3() {
 
         {/* Main Content */}
         <div className="relative z-10 flex justify-between items-center gap-[50px]">
-          <div className="w-[40%]">
+          <div className="w-[40%] hover:text-[#FCE803] text-[#FCE803] ">
             {heading}
             {description}
             <ContactButton />

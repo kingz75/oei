@@ -5,6 +5,9 @@ import zitajm from "../../assets/images/zitajm.png";
 import sufpaym from "../../assets/images/sufpaym.png";
 import agrom from "../../assets/images/agrom.png";
 import clothm from "../../assets/images/clothm.png";
+import hamzvillem from "../../assets/images/hamzvillem.png";
+import bryanam from "../../assets/images/bryanam.png";
+import fortunzm from "../../assets/images/fortunzm.png";
 
 const mobileProjects = [
   {
@@ -14,10 +17,28 @@ const mobileProjects = [
     domain: "Zitajautomobile",
   },
   {
+    title: "Cleaning Service",
+    image: hamzvillem,
+    link: "https://hamzville.com",
+    domain: "Hamzville",
+  },
+  {
+    title: "Apartment",
+    image: bryanam,
+    link: "https://bryanaresort.com",
+    domain: "Bryanaresort",
+  },
+  {
     title: "Fintech",
     image: sufpaym,
     link: "https://sufpay.ng",
     domain: "SufPay",
+  },
+  {
+    title: "E-Commerce",
+    image: fortunzm,
+    link: "https://fortunezakprints.com",
+    domain: "Fortunezakprints",
   },
   {
     title: "Agriculture",

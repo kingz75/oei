@@ -6,6 +6,9 @@ import sufpay from "../../assets/images/sufpay.png";
 import agro from "../../assets/images/agro.png";
 import cloth from "../../assets/images/cloth.png";
 import Aboutmobile from "../About/aboutmobile.jsx";
+import hamzville from "../../assets/images/hamzville.png";
+import bryana from "../../assets/images/bryana.png";
+import fortunz from "../../assets/images/fortunz.png";
 
 const projects = [
   {
@@ -15,16 +18,34 @@ const projects = [
     domain: "Zitajautomobile",
   },
   {
+    title: "Cleaning Service",
+    image: hamzville,
+    link: "https://hamzville.com",
+    domain: "Hamzville",
+  },
+  {
+    title: "Apartment",
+    image: bryana,
+    link: "https://bryanaresort.com",
+    domain: "Bryanaresort",
+  },
+  {
     title: "Fintech",
     image: sufpay,
     link: "https://sufpay.ng",
     domain: "SufPay",
   },
   {
+    title: "E-Commerce",
+    image: fortunz,
+    link: "https://fortunezakprints.com",
+    domain: "Fortunezakprints",
+  },
+  {
     title: "Agriculture",
     image: agro,
     link: "https://greenworldagrotrade.com",
-    domain: "Greenworldagrotrade",
+    domain: "Greenworldagrotradtrade",
   },
   {
     title: "E-Commerce",
