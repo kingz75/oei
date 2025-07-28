@@ -31,7 +31,7 @@ function Header() {
   };
 
   return (
-    <header className="bg-transparent fixed top-0 left-0 right-0 w-full z-50 lg:px-[101px] lg:absolute">
+    <header className="bg-transparent fixed top-0 left-0 right-0 w-full z-50 lg:px-[80px] lg:absolute">
       <div className="flex justify-between items-center px-4 py-4 lg:py-6 backdrop-blur-md lg:backdrop-blur-none bg-[#15171C90] lg:bg-transparent rounded-md">
         {/* Logo */}
         <button onClick={handleLogoClick} className="focus:outline-none">
@@ -57,11 +57,14 @@ function Header() {
           <NavLink to="/about" className={linkClasses}>
             Our Work
           </NavLink>
+          <NavLink to="/price" className={linkClasses}>
+            Pricing
+          </NavLink>
           <a
             href="https://wa.me/2348127574208" // Replace with your actual WhatsApp number
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#FCE803] hover:bg-[#FCE80320] text-[#17191E] hover:text-[#FCE803] rounded-[50px] py-[12px] lg:py-[20px] px-[40px] w-full lg:w-auto transition duration-300 text-center"
+            className="bg-[#FCE803] hover:bg-[#FCE80320] text-[#17191E] hover:text-[#FCE803] rounded-[50px] py-[12px] lg:py-[12px] px-[20px] w-full lg:w-auto transition duration-300 text-center"
           >
             <div className="flex items-center justify-center gap-2 w-full">
               <img src={watsap} alt="WhatsApp Icon" />
@@ -85,6 +88,9 @@ function Header() {
               </NavLink>
               <NavLink to="/about" className={linkClasses} onClick={toggleMenu}>
                 Our Work
+              </NavLink>
+              <NavLink to="/price" className={linkClasses} onClick={toggleMenu}>
+                Pricing
               </NavLink>
               <a
                 href="https://wa.me/2348127574208" // Replace with your actual WhatsApp number

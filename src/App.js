@@ -5,7 +5,7 @@ import Home from "./components/Home/home";
 import Footer from "./components/Footer/footer";
 
 import About from "./components/About/about";
-//import Contact from "./components/Contact/contact";
+import Price from "./components/Price/price";
 //import Product from "./components/Product/product";
 import ScrollToTop from "./components/ScrollToTop.js";
 
@@ -18,8 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/*}<Route path="/contact" element={<Contact />} />
-         <Route path="/product" element={<Product />} />
+        <Route path="/price" element={<Price />} />
+        {/*}  <Route path="/product" element={<Product />} />
         {/* <Route
 					path="/about"
 					element={<About />}

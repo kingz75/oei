@@ -1,0 +1,156 @@
+import React from "react";
+import watsap from "../../assets/icons/watsapw.svg";
+import promo from "../../assets/icons/promoicon.svg";
+import mark from "../../assets/icons/mark.svg";
+import priceicon from "../../assets/icons/priceicon.svg";
+
+const packages = [
+  {
+    title: "Starter Package",
+    oldPrice: "₦350,000 - ₦450,000",
+    newPrice: "₦250,000 - ₦350,000",
+    subtitle: "Perfect for small businesses or personal brands.",
+    features: [
+      "1 - 5 pages custom website",
+      "UI/UX design customization",
+      "Mobile-responsive design",
+      "Basic SEO setup",
+      "Contact form integration",
+      "Social media and WhatsApp integration",
+      "1 revision",
+      "Delivery: 5–7 working days",
+    ],
+  },
+  {
+    title: "Business Package",
+    oldPrice: "₦500,000 - ₦600,000",
+    newPrice: "₦400,000 – ₦500,000",
+    subtitle: "For growing businesses and service-based companies.",
+    features: [
+      "5 to 10 pages",
+      "UI/UX design customization",
+      "Blog or portfolio section",
+      "SEO optimization",
+      "Contact form integration",
+      "Social media and WhatsApp integration",
+      "3 revision",
+      "Delivery: 7-10 working days",
+    ],
+  },
+  {
+    title: "E-Commerce Package",
+    oldPrice: "₦800,000 - ₦900,000",
+    newPrice: "₦700,000 - ₦800,000",
+    subtitle: "For businesses selling online.",
+    features: [
+      "Product listings (up to 50)",
+      "UI/UX design customization",
+      "Admin dashboard",
+      "Inventory management",
+      "Shopping cart & payment gateway",
+      "Order tracking system",
+      "Training session for usage",
+      "Delivery: 10-15 working days",
+    ],
+  },
+  {
+    title: "Web App / Enterprise Solutions",
+    oldPrice: "₦900,000+",
+    newPrice: "₦800,000+",
+    subtitle: "Built from scratch based on client requirements.",
+    features: [
+      "UI/UX design customization",
+      "Full-stack development (Frontend + Backend)",
+      "Admin control panel",
+      "API integration",
+      "Security & performance optimization",
+      "Ongoing maintenance (optional)",
+      "5+ revision (Custom)",
+      "Timelines & pricing based on scope",
+    ],
+  },
+];
+
+function PriceCard({ pkg }) {
+  return (
+    <div className="bg-[url('/src/assets/back/pricebg.png')] rounded-3xl bg-center bg-cover bg-no-repeat w-full lg:px-[48px] px-5 py-5 lg:py-[81px] relative mt-5 lg:mt-0">
+      <div className="absolute top-5 right-5 lg:static mb-3 lg:mb-0 lg:hidden">
+        <img src={promo} alt="Promo Icon" className="w-[80px]" />
+      </div>
+
+      <div className="flex justify-between items-center">
+        <h2 className="text-white font-extrabold text-[24px] lg:text-[32px]">
+          {pkg.title}
+        </h2>
+        <div className="lg:block hidden">
+          <img src={promo} alt="Promo" />
+        </div>
+      </div>
+
+      <p className="text-[#FFFFFF64] text-[16px] lg:text-[18px] mt-2 lg:mt-3">
+        {pkg.subtitle}
+      </p>
+
+      <div className="mt-[40px] lg:mt-[90px]">
+        <p className="text-white font-extrabold text-[18px] lg:text-[20px] line-through opacity-70">
+          {pkg.oldPrice}
+        </p>
+        <p className="text-white font-extrabold text-[26px] lg:text-[40px] mt-3 lg:mt-4">
+          {pkg.newPrice}
+        </p>
+      </div>
+
+      <div className="text-[#FFFFFFCC] text-[16px] lg:text-[18px] mt-[20px] lg:mt-[60px] leading-[40px] lg:leading-[62px] space-y-2">
+        {pkg.features.map((feature, i) => (
+          <p key={i} className="flex items-start lg:items-center gap-2">
+            <img src={mark} alt="Checkmark" className="mt-[10px] lg:mt-0" />
+            {feature}
+          </p>
+        ))}
+      </div>
+
+      <div className="mt-9">
+        <a
+          href="https://wa.me/2348127574208"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="flex items-center gap-2 bg-[#FFFFFF24] text-white hover:bg-[#ffffff48] px-8 py-4 rounded-full text-[16px] font-bold shadow-lg transition duration-300">
+            <img src={watsap} alt="WhatsApp Icon" />
+            Contact Us
+          </button>
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function Price() {
+  return (
+    <section className="bg-cover bg-center lg:py-[104px] pb-[80px] pt-[100px] px-[16px] lg:px-[80px] lg:bg-[url('/src/assets/back/bgimage.png')] bg-[url('/src/assets/back/bgimagem.png')]">
+      <div className="text-center">
+        <img src={priceicon} alt="Price Icon" className="mx-auto" />
+        <div className="font-bold lg:text-[48px] text-[32px] text-[#FCE803] lg:mt-[40px] mt-[20px]">
+          “Get Up to ₦100,000 OFF – Limited Time”
+        </div>
+        <div className="lg:text-[32px] text-[22px] font-semibold text-[#ffffff] lg:mt-[30px] mt-[15px] lg:mb-[60px] mb-[30px]">
+          Choose Package That Suit Your Business
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+        {packages.slice(0, 2).map((pkg, index) => (
+          <PriceCard key={index} pkg={pkg} />
+        ))}
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:mt-9">
+        {packages.slice(2).map((pkg, index) => (
+          <PriceCard key={index} pkg={pkg} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export default Price;

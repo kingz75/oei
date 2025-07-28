@@ -24,7 +24,7 @@ function Design2() {
   return (
     <div>
       {/* Desktop Version */}
-      <section className="hidden lg:block relative rounded-3xl mt-[50px] bg-[#12121290] shadow-yellow-300 overflow-hidden">
+      <section className="hidden lg:block relative rounded-3xl mt-[50px] bg-[#12121290]  overflow-hidden">
         {/* Yellow Glow Circle */}
         <div className="absolute top-[50%] left-[-100px] w-[200px] h-[200px] bg-[#FCE803] opacity-30 rounded-full blur-3xl z-0"></div>
 
