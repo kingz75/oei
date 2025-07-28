@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import watsap from "../../assets/icons/watsapw.svg";
+import watsap from "../../assets/icons/watsap.svg";
 import respo from "../../assets/images/respo.png";
 
 function Design3() {
@@ -24,7 +24,7 @@ function Design3() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <button className="flex items-center gap-2 bg-[#FFFFFF24] text-white hover:bg-[#ffffff48] px-8 py-4 rounded-full text-[16px] font-bold shadow-lg transition duration-300">
+      <button className="flex items-center gap-2 bg-[#FCE803] text-[#17191E] hover:bg-[#FCE80320] hover:text-[#FCE803] px-8 py-4 rounded-full text-[16px] font-bold shadow-lg transition duration-300">
         <img src={watsap} alt="WhatsApp Icon" />
         Contact Us
       </button>

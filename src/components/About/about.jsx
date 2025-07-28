@@ -23,7 +23,7 @@ const projects = [
   {
     title: "Agriculture",
     image: agro,
-    link: "https://https://www.greenworldagrotrade.com/",
+    link: "https://greenworldagrotrade.com",
     domain: "Greenworldagrotrade",
   },
   {
