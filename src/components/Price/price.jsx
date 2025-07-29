@@ -89,22 +89,18 @@ function PriceCard({ pkg, index }) {
       whileInView="show"
       viewport={{ once: true }}
       custom={index * 0.2}
-      className="bg-[url('/src/assets/back/pricebg.png')] rounded-3xl bg-center bg-cover bg-no-repeat w-full lg:px-[48px] px-5 py-5 lg:py-[81px] relative mt-5 lg:mt-0"
+      className="bg-[url('/src/assets/back/pricebg.png')] rounded-3xl bg-center bg-cover bg-no-repeat w-full lg:pl-[48px] pl-5 pr-2 py-5 lg:py-[81px] relative mt-5 lg:mt-0"
     >
-      <div className="absolute top-5 right-5 lg:static mb-3 lg:mb-0 lg:hidden">
-        <img src={promo} alt="Promo Icon" className="w-[80px]" />
-      </div>
-
       <div className="flex justify-between ">
-        <h2 className="text-white font-extrabold text-[24px] lg:text-[32px]">
+        <h2 className="text-white font-extrabold text-[24px] lg:text-[32px] w-[60%]">
           {pkg.title}
         </h2>
-        <div className="lg:block hidden place-items-start">
-          <img src={promo} alt="Promo" />
+        <div className=" place-items-start w-[40%]">
+          <img src={promo} alt="Promo" className="lg:py-[20px] lg:px-[40px]" />
         </div>
       </div>
 
-      <p className="text-[#FFFFFF64] text-[16px] lg:text-[18px] mt-2 lg:mt-3">
+      <p className="text-[#FFFFFF80] text-[16px] lg:text-[18px] mt-2 lg:mt-3">
         {pkg.subtitle}
       </p>
 
