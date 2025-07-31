@@ -89,7 +89,12 @@ function PriceCard({ pkg, index }) {
       whileInView="show"
       viewport={{ once: true }}
       custom={index * 0.2}
-      className="bg-[url('/src/assets/back/pricebg.png')] rounded-3xl bg-center bg-cover bg-no-repeat w-full lg:pl-[48px] pl-5 pr-2 py-5 lg:py-[81px] relative mt-5 lg:mt-0"
+      whileHover={{
+        scale: 1.05,
+        boxShadow: "0px 20px 40px rgba(252, 232, 3, 0.25)",
+        y: -10,
+      }}
+      className="bg-[url('/src/assets/back/pricebg.png')] rounded-3xl bg-center bg-cover bg-no-repeat w-full lg:pl-[48px] pl-5 pr-2 py-5 lg:py-[81px] relative mt-5 lg:mt-0 transition duration-300"
     >
       <div className="flex justify-between ">
         <h2 className="text-white font-extrabold text-[24px] lg:text-[32px] w-[60%]">
@@ -104,14 +109,21 @@ function PriceCard({ pkg, index }) {
         {pkg.subtitle}
       </p>
 
-      <div className="mt-[40px] lg:mt-[90px]">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        custom={index * 0.25 + 0.1}
+        className="mt-[40px] lg:mt-[90px]"
+      >
         <p className="text-white font-extrabold text-[18px] lg:text-[20px] line-through opacity-70">
           {pkg.oldPrice}
         </p>
         <p className="text-white font-extrabold text-[26px] lg:text-[40px] mt-3 lg:mt-4">
           {pkg.newPrice}
         </p>
-      </div>
+      </motion.div>
 
       <div className="text-[#FFFFFFCC] text-[16px] lg:text-[18px] mt-[20px] lg:mt-[60px] leading-[40px] lg:leading-[62px] space-y-2">
         {pkg.features.map((feature, i) => (
@@ -122,7 +134,7 @@ function PriceCard({ pkg, index }) {
         ))}
       </div>
 
-      <motion.div whileHover={{ scale: 1.05 }} className="mt-9">
+      <motion.div whileHover={{ scale: 1.1 }} className="mt-9">
         <a
           href="https://wa.me/2348127574208"
           target="_blank"
