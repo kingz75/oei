@@ -4,8 +4,8 @@ import Header from "./components/Header/header";
 import Home from "./components/Home/home";
 import Footer from "./components/Footer/footer";
 
-import About from "./components/About/about";
-import Price from "./components/Price/price";
+import Ourwork from "./components/Ourwork/ourwork";
+//import Price from "./components/Price/price";
 //import Product from "./components/Product/product";
 import ScrollToTop from "./components/ScrollToTop.js";
 
@@ -17,8 +17,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/price" element={<Price />} />
+        <Route path="/ourwork" element={<Ourwork />} />
+        {/*} <Route path="/price" element={<Price />} />
         {/*}  <Route path="/product" element={<Product />} />
         {/* <Route
 					path="/about"

@@ -54,12 +54,12 @@ function Header() {
           <NavLink to="/" className={linkClasses}>
             Home
           </NavLink>
-          <NavLink to="/about" className={linkClasses}>
+          <NavLink to="/ourwork" className={linkClasses}>
             Our Work
           </NavLink>
-          <NavLink to="/price" className={linkClasses}>
+          {/* <NavLink to="/price" className={linkClasses}>
             Pricing
-          </NavLink>
+          </NavLink>*/}
           <a
             href="https://wa.me/2348127574208" // Replace with your actual WhatsApp number
             target="_blank"
@@ -86,12 +86,16 @@ function Header() {
               <NavLink to="/" className={linkClasses} onClick={toggleMenu}>
                 Home
               </NavLink>
-              <NavLink to="/about" className={linkClasses} onClick={toggleMenu}>
+              <NavLink
+                to="/ourwork"
+                className={linkClasses}
+                onClick={toggleMenu}
+              >
                 Our Work
               </NavLink>
-              <NavLink to="/price" className={linkClasses} onClick={toggleMenu}>
+              {/* <NavLink to="/price" className={linkClasses} onClick={toggleMenu}>
                 Pricing
-              </NavLink>
+              </NavLink> */}
               <a
                 href="https://wa.me/2348127574208" // Replace with your actual WhatsApp number
                 target="_blank"

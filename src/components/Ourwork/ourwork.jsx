@@ -5,7 +5,7 @@ import zitaj from "../../assets/images/zitaj.png";
 import sufpay from "../../assets/images/sufpay.png";
 import agro from "../../assets/images/agro.png";
 import cloth from "../../assets/images/cloth.png";
-import Aboutmobile from "../About/aboutmobile.jsx";
+import Aboutmobile from "../Ourwork/aboutmobile.jsx";
 import hamzville from "../../assets/images/hamzville.png";
 import bryana from "../../assets/images/bryana.png";
 import fortunz from "../../assets/images/fortunz.png";
@@ -55,7 +55,7 @@ const projects = [
   },
 ];
 
-function About() {
+function Ourwork() {
   return (
     <div>
       {/* Desktop View */}
@@ -116,4 +116,4 @@ function About() {
   );
 }
 
-export default About;
+export default Ourwork;
