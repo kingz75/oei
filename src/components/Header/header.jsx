@@ -1,117 +1,197 @@
-import React, { useState, useEffect } from "react";
-import { useLocation, NavLink } from "react-router-dom";
-import main from "../../assets/icons/mainlogo.svg";
-import watsap from "../../assets/icons/watsap.svg";
-import { HiMenu, HiX } from "react-icons/hi";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import main from "../../assets/icons/mainlogo.png";
 
 function Header() {
+  const [language, setLanguage] = useState("EN");
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    if (menuOpen) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-
-    return () => {
-      document.body.classList.remove("overflow-hidden");
-    };
-  }, [menuOpen]);
-
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-
-  const linkClasses = ({ isActive }) =>
-    isActive ? "text-white font-bold" : "text-[#ffffff90] hover:text-[#FCE803]";
-
-  const handleLogoClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    if (menuOpen) setMenuOpen(false);
-  };
 
   return (
-    <header className="bg-transparent fixed top-0 left-0 right-0 w-full z-50 lg:px-[80px] lg:absolute">
-      <div className="flex justify-between items-center px-4 py-4 lg:py-6 backdrop-blur-md lg:backdrop-blur-none bg-[#15171C90] lg:bg-transparent rounded-md">
-        {/* Logo */}
-        <button onClick={handleLogoClick} className="focus:outline-none">
-          <img src={main} alt="Main Logo" className="h-[40px] lg:h-[60px]" />
-        </button>
+    <>
+      {/* Header always above overlay */}
+      <header className="bg-[#ffffff] px-6 lg:px-[120px] fixed w-full z-50 shadow-sm">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <div>
+            <NavLink to="/">
+              <img
+                src={main}
+                alt="main"
+                className="h-10 md:h-12 cursor-pointer"
+              />
+            </NavLink>
+          </div>
 
-        {/* Hamburger Icon */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu} aria-label="Toggle menu">
-            {menuOpen ? (
-              <HiX className="w-6 h-6 text-[#FCE803]" />
-            ) : (
-              <HiMenu className="w-6 h-6 text-[#FCE803]" />
-            )}
-          </button>
-        </div>
-
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-[40px] text-[18px]">
-          <NavLink to="/" className={linkClasses}>
-            Home
-          </NavLink>
-          <NavLink to="/ourwork" className={linkClasses}>
-            Our Work
-          </NavLink>
-          {/* <NavLink to="/price" className={linkClasses}>
-            Pricing
-          </NavLink>*/}
-          <a
-            href="https://wa.me/2348127574208" // Replace with your actual WhatsApp number
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#FCE803] hover:bg-[#FCE80320] text-[#17191E] hover:text-[#FCE803] rounded-[50px] py-[12px] lg:py-[12px] px-[20px] w-full lg:w-auto transition duration-300 text-center"
-          >
-            <div className="flex items-center justify-center gap-2 w-full">
-              <img src={watsap} alt="WhatsApp Icon" />
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-[50px] text-[16px]">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "font-bold text-[#182948]"
+                  : "text-[#A2A49B] hover:text-[#182948]"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "font-bold text-[#182948]"
+                  : "text-[#A2A49B] hover:text-[#182948]"
+              }
+            >
+              About Us
+            </NavLink>
+            <NavLink
+              to="/program"
+              className={({ isActive }) =>
+                isActive
+                  ? "font-bold text-[#182948]"
+                  : "text-[#A2A49B] hover:text-[#182948]"
+              }
+            >
+              Programs & Initiatives
+            </NavLink>
+            <NavLink
+              to="/news"
+              className={({ isActive }) =>
+                isActive
+                  ? "font-bold text-[#182948]"
+                  : "text-[#A2A49B] hover:text-[#182948]"
+              }
+            >
+              News & Media
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive
+                  ? "font-bold text-[#182948]"
+                  : "text-[#A2A49B] hover:text-[#182948]"
+              }
+            >
               Contact Us
-            </div>
-          </a>
-        </nav>
-      </div>
+            </NavLink>
+          </nav>
 
-      {/* Mobile Dropdown */}
-      {menuOpen && (
-        <>
-          <div
-            className="fixed inset-0 top-[96px] bg-[#15171C80] backdrop-blur-sm z-40"
-            onClick={toggleMenu}
-          />
-          <div className="absolute top-full left-0 right-0 md:hidden z-50 bg-[#15171C] rounded-b-2xl px-[20px] py-6 shadow-lg">
-            <div className="flex flex-col gap-4 text-[18px]">
-              <NavLink to="/" className={linkClasses} onClick={toggleMenu}>
-                Home
-              </NavLink>
-              <NavLink
-                to="/ourwork"
-                className={linkClasses}
-                onClick={toggleMenu}
-              >
-                Our Work
-              </NavLink>
-              {/* <NavLink to="/price" className={linkClasses} onClick={toggleMenu}>
-                Pricing
-              </NavLink> */}
+          {/* Right Section */}
+          <div className="flex items-center gap-3">
+            {/* Language Dropdown */}
+            <select
+              value={language}
+              onChange={(e) => setLanguage(e.target.value)}
+              className="bg-white text-[#182948] text-[14px] px-2 py-1 cursor-pointer"
+            >
+              <option value="EN">EN</option>
+              <option value="FR">FR</option>
+              <option value="AR">AR</option>
+            </select>
+
+            {/* Desktop: Donate */}
+            <div className="hidden md:flex bg-[#ABC452] text-[#182948] text-[16px] py-[10px] px-[14px] font-bold rounded-md items-center justify-center">
               <a
-                href="https://wa.me/2348127574208" // Replace with your actual WhatsApp number
+                href="https://wa.me/2348127574208"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#FCE803] hover:bg-[#FCE80320] text-[#17191E] hover:text-[#FCE803] rounded-[50px] py-[12px] lg:py-[20px] px-[40px] w-full lg:w-auto transition duration-300 text-center"
               >
-                <div className="flex items-center justify-center gap-2 w-full">
-                  <img src={watsap} alt="WhatsApp Icon" />
-                  Contact Us
-                </div>
+                Donate Now
               </a>
             </div>
+
+            {/* Mobile Hamburger */}
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="md:hidden text-[#182948]"
+            >
+              {menuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile Menu + Overlay */}
+      {menuOpen && (
+        <>
+          {/* Overlay BELOW header */}
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={() => setMenuOpen(false)}
+          />
+
+          {/* Menu (stays above overlay, below header) */}
+          <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-[30px] fixed top-[64px] w-full z-50">
+            <NavLink
+              to="/"
+              onClick={() => setMenuOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "block font-bold text-[#182948]"
+                  : "block text-[#A2A49B] hover:text-[#182948]"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              onClick={() => setMenuOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "block font-bold text-[#182948]"
+                  : "block text-[#A2A49B] hover:text-[#182948]"
+              }
+            >
+              About Us
+            </NavLink>
+            <NavLink
+              to="/program"
+              onClick={() => setMenuOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "block font-bold text-[#182948]"
+                  : "block text-[#A2A49B] hover:text-[#182948]"
+              }
+            >
+              Programs & Initiatives
+            </NavLink>
+            <NavLink
+              to="/news"
+              onClick={() => setMenuOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "block font-bold text-[#182948]"
+                  : "block text-[#A2A49B] hover:text-[#182948]"
+              }
+            >
+              News & Media
+            </NavLink>
+            <NavLink
+              to="/contact"
+              onClick={() => setMenuOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "block font-bold text-[#182948]"
+                  : "block text-[#A2A49B] hover:text-[#182948]"
+              }
+            >
+              Contact Us
+            </NavLink>
+
+            {/* Mobile: Donate */}
+            <a
+              href="https://wa.me/2348127574208"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-[#182948] text-[#ffffff] text-[16px] py-[10px] px-[14px] font-bold rounded-md text-center"
+            >
+              Donate Now
+            </a>
           </div>
         </>
       )}
-    </header>
+    </>
   );
 }
 

@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/header";
 import Home from "./components/Home/home";
 import Footer from "./components/Footer/footer";
-
-import Ourwork from "./components/Ourwork/ourwork";
-//import Price from "./components/Price/price";
-//import Product from "./components/Product/product";
+import About from "./components/About/about.jsx";
+import Program from "./components/Program/program";
+import News from "./components/News/news";
+import Contact from "./components/Contact/contact";
 import ScrollToTop from "./components/ScrollToTop.js";
 
 function App() {
@@ -17,22 +17,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ourwork" element={<Ourwork />} />
-        {/*} <Route path="/price" element={<Price />} />
-        {/*}  <Route path="/product" element={<Product />} />
-        {/* <Route
-					path="/about"
-					element={<About />}
-				/>
-				<Route
-					path="/"
-					element={<PropertyListing />}
-				/>
-
-				<Route
-					path="/submitProject"
-					element={<SubmitProject />}
-				/> */}
+        <Route path="/about" element={<About />} />
+        <Route path="/program" element={<Program />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>

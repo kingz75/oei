@@ -1,6 +1,6 @@
 import React from "react";
 
-function About() {
+function News() {
   return (
     <div className="bg-[#ffffff] ">
       <div className="flex justify-between items-center">
@@ -12,4 +12,4 @@ function About() {
   );
 }
 
-export default About;
+export default News;

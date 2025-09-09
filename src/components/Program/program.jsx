@@ -1,6 +1,7 @@
 import React from "react";
+import { Link as RouterLink, useNavigate, useLocation } from "react-router-dom";
 
-function About() {
+function Program() {
   return (
     <div className="bg-[#ffffff] ">
       <div className="flex justify-between items-center">
@@ -12,4 +13,4 @@ function About() {
   );
 }
 
-export default About;
+export default Program;
