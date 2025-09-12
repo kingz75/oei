@@ -7,6 +7,7 @@ import About from "./components/About/about.jsx";
 import Program from "./components/Program/program";
 import News from "./components/News/news";
 import Contact from "./components/Contact/contact";
+import Donate from "./components/Donate/donate";
 import ScrollToTop from "./components/ScrollToTop.js";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/program" element={<Program />} />
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/donate" element={<Donate />} />
       </Routes>
       <Footer />
     </Router>

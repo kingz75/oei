@@ -92,13 +92,11 @@ function Header() {
 
             {/* Desktop: Donate */}
             <div className="hidden md:flex bg-[#ABC452] text-[#182948] text-[16px] py-[10px] px-[14px] font-bold rounded-md items-center justify-center">
-              <a
-                href="https://wa.me/2348127574208"
-                target="_blank"
-                rel="noopener noreferrer"
+              <NavLink
+               to="/donate"
               >
                 Donate Now
-              </a>
+              </NavLink>
             </div>
 
             {/* Mobile Hamburger */}
