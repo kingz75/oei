@@ -1,8 +1,8 @@
 import React from "react";
 
 function Ourstory() {
-  // Replace this with your actual YouTube video ID
-  const YOUTUBE_VIDEO_ID = "your-video-id-here"; // e.g., "dQw4w9WgXcQ"
+  // YouTube video ID extracted from the provided URL
+  const YOUTUBE_VIDEO_ID = "bIgNKKU7bpw";
   
   return (
     <section className="my-[50px] px-[16px]">
