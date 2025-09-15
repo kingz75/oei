@@ -178,14 +178,13 @@ function Header() {
             </NavLink>
 
             {/* Mobile: Donate */}
-            <a
-              href="https://wa.me/2348127574208"
-              target="_blank"
-              rel="noopener noreferrer"
+            <NavLink
+              to="/donate"
+              onClick={() => setMenuOpen(false)}
               className="block bg-[#182948] text-[#ffffff] text-[16px] py-[10px] px-[14px] font-bold rounded-md text-center"
             >
               Donate Now
-            </a>
+            </NavLink>
           </div>
         </>
       )}

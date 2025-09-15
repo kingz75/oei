@@ -8,7 +8,7 @@ import Teamslide from "../About/teamslide.jsx";
 
 export default function AboutUs() {
   return (
-    <section className="lg:bg-[url('/src/assets/back/aboutbg.png')] bg-no-repeat bg-center bg-cover lg:px-[120px]  lg:pt-[170px] pt-[90px]">
+    <section className="bg-[url('/src/assets/back/aboutbg.png')] bg-no-repeat bg-center bg-cover lg:px-[120px]  lg:pt-[170px] pt-[90px]">
       <div className="px-[16px] lg:px-0">
         {/* Mobile Heading */}
         <div className="lg:hidden">
@@ -48,7 +48,9 @@ export default function AboutUs() {
             {/* Desktop Heading */}
             <div className="text-center hidden lg:block">
               <div className="place-items-center">
-                <h2 className="text-[32px] font-medium text-[#182948]">About Us</h2>
+                <h2 className="text-[32px] font-medium text-[#182948]">
+                  About Us
+                </h2>
                 <div className="border-b-[7px] rounded-full w-[150px] border-[#ABC452]"></div>
               </div>
               <p className="text-[#555555] mt-5 text-center text-[20px] leading-[36px] mb-[40px]">
@@ -58,7 +60,7 @@ export default function AboutUs() {
               </p>
             </div>
 
-            {/* Dark Card - Mission, Vision, Values */}
+            {/*  Mission, Vision, Values */}
             <div className="lg:bg-[url('/src/assets/back/abbg2.png')] bg-[url('/src/assets/back/abbgm2.png')] bg-no-repeat bg-cover bg-center py-8 px-4 rounded-2xl lg:mt-0 mt-[20px] space-y-8">
               {/* Mission */}
               <div>
@@ -117,7 +119,6 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* Other Sections */}
       <Ourstory />
       <Ourteam />
       <Teamslide />
