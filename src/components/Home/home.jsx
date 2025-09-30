@@ -1,15 +1,28 @@
-import React from "react";
+import React from 'react';
+import { FaArrowRight } from 'react-icons/fa';
+import rightHS from '../../assets/images/sectionTwoImage.png';
+import SectionTwo from './sectionTwo';
+import HeroSection from './heroSection';
+import Approach from './approach';
+import GetInvolved from './getInvolved';
+import Impact from '../Program/impact';
+import DonatePage from './donatePage';
+import JoinUs from './joinUs';
+import Stories from './stories';
 
-function About() {
-  return (
-    <div className="bg-[#ffffff] ">
-      <div className="flex justify-between items-center">
-        <div className="py-[8px] px-[15px] bg-blue-500 rounded">
-          <button className="text-white">Donate</button>
-        </div>
-      </div>
-    </div>
-  );
-}
+const Home = () => {
+	return (
+		<div className="relative font-dmSans ">
+			<HeroSection />
+			<SectionTwo />
+			<Approach />
+			<GetInvolved />
+			<DonatePage />
+			<Stories />
+			<Impact />
+			<JoinUs />
+		</div>
+	);
+};
 
-export default About;
+export default Home;
