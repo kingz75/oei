@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Impact from "../Program/impact.jsx";
-import { div } from "framer-motion/client";
 
 function Program() {
   const [showMore, setShowMore] = useState(false);
@@ -86,7 +85,6 @@ function Program() {
             </div>
           </div>
 
-          {/* Program Cards */}
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-x-[16px] lg:gap-y-[60px] flex-wrap">
             {allPrograms.map((program) => (
               <Link

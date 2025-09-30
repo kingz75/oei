@@ -1,6 +1,5 @@
 import { useState } from "react";
 import donationImage from "../../assets/images/donationPage.png";
-import { div } from "framer-motion/client";
 
 export default function Donation() {
   const [donationType, setDonationType] = useState("one-time");
