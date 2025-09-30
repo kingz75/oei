@@ -39,7 +39,7 @@ function Footer() {
             {/* Social Media */}
             <div className="flex gap-4 flex-wrap">
               <a
-                href="https://wa.me/2349119111100"
+                href="https://www.youtube.com/@OhuneneEmpowermentInitiative"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
