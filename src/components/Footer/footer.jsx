@@ -6,11 +6,11 @@ import email from "../../assets/icons/Email.svg";
 import location from "../../assets/icons/location.svg";
 import facebook from "../../assets/icons/facebook.svg";
 import instagram from "../../assets/icons/instagram.svg";
-import x from "../../assets/icons/x.svg";
+import youtube from "../../assets/icons/youtube.svg";
 
 function Footer() {
   return (
-    <footer className="lg:bg-[url('/src/assets/back/footerbg.png')] bg-[url('/src/assets/back/footerbgm.png')] bg-center bg-cover px-4 sm:px-8 md:px-12 lg:px-[101px] py-8 lg:py-[70px]">
+    <footer className="lg:bg-[url('/src/assets/back/footerbg.png')] bg-[url('/src/assets/back/footerbgm.png')] bg-center bg-cover px-4 sm:px-8 md:px-12 lg:px-[101px] py-8 lg:py-[70px] font-dmSans">
       <div className="max-w-[1440px] mx-auto flex flex-col">
         {/* Logo */}
         <div className="flex  lg:justify-start pt-2 lg:mb-6">
@@ -45,7 +45,7 @@ function Footer() {
                 aria-label="YouTube"
               >
                 <img
-                  src={x}
+                  src={youtube}
                   alt="YouTube"
                   className="h-6 w-6 hover:opacity-70 transition-opacity"
                 />

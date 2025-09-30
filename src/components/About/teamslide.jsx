@@ -8,16 +8,18 @@ import "swiper/css/navigation";
 import "swiper/css/free-mode";
 
 // images
-import sani from "../../assets/images/saniimage.png";
-import hauwa from "../../assets/images/hauwaimage.png";
-import zafirah from "../../assets/images/zaphimage.png";
+import sani from "../../assets/images/sani.png";
+import hauwa from "../../assets/images/hauwa.png";
+import zafirah from "../../assets/images/zaph.png";
+import mary from "../../assets/images/mary.png";
+import sufian from "../../assets/images/sufian.png";
 
 const teamMembers = [
-  { name: "Isah A Sani", role: "Chief Executive", image: sani },
-  { name: "Hauwa Mohammed", role: "Team Member", image: hauwa },
+  { name: "Isah A Sani", role: "CTO", image: sani },
+  { name: "Mary I Agamalafiya", role: "Program Coordinator", image: mary },
+  { name: "Sufian A Ahmed", role: "Team Member", image: sufian },
   { name: "Zafirah Abubakar Ohunene", role: "Team Member", image: zafirah },
   { name: "Hauwa Mohammed", role: "Team Member", image: hauwa },
-  { name: "Zafirah Abubakar Ohunene", role: "Team Member", image: zafirah },
 ];
 
 export default function Teamslide() {
@@ -48,12 +50,12 @@ export default function Teamslide() {
   }, [isMobile]);
 
   return (
-    <section className="py-12  lg:px-[120px] relative">
+    <section className="py-12 lg:px-[120px] relative font-dmSans">
       <Swiper
         modules={[Navigation, Autoplay, FreeMode]}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         loop={true}
-        freeMode={isMobile ? { enabled: true } : { enabled: false }} // ✅ Swiper 11 syntax
+        freeMode={isMobile ? { enabled: true } : { enabled: false }}
         autoplay={
           isMobile
             ? {
@@ -76,11 +78,18 @@ export default function Teamslide() {
         {teamMembers.map((member, i) => (
           <SwiperSlide key={i}>
             <div className="flex flex-col items-center text-center">
-              <img src={member.image} alt={member.name} />
-              <h3 className="mt-4 font-semibold text-lg text-[#182948]">
+              {/* Image container with padding & shadow */}
+              <div className="">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-[350px] h-auto rounded-full"
+                />
+              </div>
+              <h3 className="mt-4 font-bold text-[20px] text-[#182948]">
                 {member.name}
               </h3>
-              <p className="mt-1 text-sm text-[#555555]">{member.role}</p>
+              <p className="mt-1 text-[14px] text-[#555555]">{member.role}</p>
             </div>
           </SwiperSlide>
         ))}

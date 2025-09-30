@@ -5,11 +5,11 @@ function Ourstory() {
   const YOUTUBE_VIDEO_ID = "L_MLfp3WVkI";
 
   return (
-    <section className="my-[50px] px-[16px]">
+    <section className="my-[50px] px-[16px] font-dmSans">
       <div className="grid lg:grid-cols-2 gap-12 lg:items-center">
         {/* Left Side - Text */}
         <div className="text-left">
-          <h2 className="lg:text-[32px] text-[24px] font-medium text-[#182948]">
+          <h2 className="lg:text-[32px] text-[24px] font-medium text-[#182948] font-playfair">
             Our Story
           </h2>
           <div className="border-b-[7px] rounded-full lg:w-[150px] w-[105px] border-[#ABC452] lg:mx-0 mt-2"></div>

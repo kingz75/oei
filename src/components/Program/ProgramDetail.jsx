@@ -112,7 +112,7 @@ function ProgramDetail() {
   }
 
   return (
-    <section className="pt-[120px] px-[16px] lg:px-[120px] mb-[75px]">
+    <section className="pt-[120px] px-[16px] lg:px-[120px] mb-[75px] font-dmSans">
       <div className="max-w-4xl mx-auto">
         {/* Mobile Swiper */}
         <div className="block lg:hidden mb-6 rounded-xl overflow-hidden">
@@ -156,10 +156,10 @@ function ProgramDetail() {
           </Swiper>
         </div>
 
-        <span className="bg-[#ABC452] text-white px-4 py-2 rounded-md text-sm font-bold">
+        <span className="bg-[#ABC452] text-white px-4 py-2 rounded-md text-sm font-bold font-playfair">
           {program.label}
         </span>
-        <h1 className="text-3xl font-bold text-[#182948] mt-4 mb-4">
+        <h1 className="text-3xl font-bold text-[#182948] mt-4 mb-4 font-playfair">
           {program.title}
         </h1>
 

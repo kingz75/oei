@@ -2,9 +2,11 @@ import React from "react";
 
 function Ourstory() {
   return (
-    <div className="lg:py-10 lg:px-[50px] px-[16px]">
+    <div className="lg:py-10 lg:px-[50px] px-[16px] font-dmSans">
       <div className="text-left">
-        <h2 className="text-[32px] font-medium text-[#182948]">Our Team</h2>
+        <h2 className="text-[32px] font-medium text-[#182948] font-playfair">
+          Our Team
+        </h2>
         <div className="border-b-[7px] rounded-full lg:w-[150px] w-[140px] border-[#ABC452]  lg:mx-0 mt-2"></div>
 
         <p className="text-[#555555] mt-5 lg:text-[20px] text-[16px] lg:leading-[36px] leading-[32px]">

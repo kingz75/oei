@@ -33,10 +33,10 @@ const Contact = () => {
   };
 
   return (
-    <section className="lg:pt-[170px] pt-[90px] lg:px-[120px] px-[16px] mb-[75px]">
+    <section className="lg:pt-[170px] pt-[90px] lg:px-[120px] px-[16px] mb-[75px] font-dmSans">
       {/* Header Section */}
-      <div className="text-center lg:mb-[60px] mb-[40px] lg:px-28 ">
-        <div className="text-[#182948] lg:text-[32px] text-[24px] font-bold mb-[12px]">
+      <div className="text-center lg:mb-[60px] mb-[40px] lg:px-[250px] ">
+        <div className="text-[#182948] lg:text-[32px] text-[24px] font-bold mb-[12px] font-playfair">
           Contact us if you have Questions or Suggestions
         </div>
         <div className="text-[#182948] lg:text-[20px] text-[16px]  leading-[28px]">

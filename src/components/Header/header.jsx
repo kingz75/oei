@@ -24,7 +24,7 @@ function Header() {
   return (
     <>
       {/* Header always above overlay */}
-      <header className="bg-[#ffffff] px-6 lg:px-[120px] fixed w-full z-50 shadow-sm">
+      <header className="bg-[#ffffff] px-6 lg:px-[120px] fixed w-full z-50 shadow-sm font-dmSans">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div>
@@ -69,7 +69,7 @@ function Header() {
             >
               Programs & Initiatives
             </NavLink>
-            <NavLink
+            {/*   <NavLink
               to="/news"
               className={({ isActive }) =>
                 isActive
@@ -78,7 +78,7 @@ function Header() {
               }
             >
               News & Media
-            </NavLink>
+            </NavLink> */}
             <NavLink
               to="/contact"
               className={({ isActive }) =>
@@ -130,7 +130,7 @@ function Header() {
           />
 
           {/* Menu (stays above overlay, below header) */}
-          <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-[30px] fixed top-[64px] w-full z-50">
+          <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-[30px] fixed top-[64px] w-full z-50 font-dmSans">
             <NavLink
               to="/"
               onClick={() => setMenuOpen(false)}
@@ -164,7 +164,7 @@ function Header() {
             >
               Programs & Initiatives
             </NavLink>
-            <NavLink
+            {/*  <NavLink
               to="/news"
               onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>
@@ -173,8 +173,8 @@ function Header() {
                   : "block text-[#A2A49B] hover:text-[#182948]"
               }
             >
-              News & Media
-            </NavLink>
+             News & Media
+            </NavLink> */}
             <NavLink
               to="/contact"
               onClick={() => setMenuOpen(false)}
