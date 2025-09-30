@@ -92,7 +92,7 @@ function Program() {
               <Link
                 key={program.id}
                 to={`/program/${program.id}`}
-                state={program} // Pass program data to detail page
+                state={program}
                 className="rounded-xl flex flex-col justify-between w-full lg:w-[49.2%] min-h-[350px] lg:min-h-[450px] md:min-h-[350px] bg-no-repeat bg-cover bg-center"
                 style={{
                   backgroundImage: `url(${getBackgroundImage(program)})`,
@@ -118,7 +118,6 @@ function Program() {
             ))}
           </div>
 
-          {/* View More / View Less Button */}
           <div className="text-center lg:mt-[60px] mt-[32px]">
             <button
               onClick={() => setShowMore(!showMore)}
