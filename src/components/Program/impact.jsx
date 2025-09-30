@@ -1,5 +1,6 @@
 import React from 'react';
 import impact from '../../assets/images/impactimage.png';
+import { NavLink } from 'react-router-dom';
 
 const ImpactReport = () => {
 	return (
@@ -67,8 +68,8 @@ const ImpactReport = () => {
 
 					{/*  Button */}
 					<div>
-						<button className="font-bold py-[12px] px-[16px] rounded-md text-[16px] text-[#182948] bg-[#abc452] hover:shadow-green-500/50">
-							Become a Volunteer
+						<button className="font-bold py-[12px] px-[16px] rounded-md text-[16px] text-[#182948] bg-[#abc452] hover:shadow-lg hover:translate-y-[-2px] transition ">
+							<NavLink to="/contact">Become a Volunteer</NavLink>
 						</button>
 					</div>
 				</div>
