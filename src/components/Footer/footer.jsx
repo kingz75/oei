@@ -42,16 +42,16 @@ function Footer() {
                 href="https://wa.me/2349119111100"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="WhatsApp"
+                aria-label="YouTube"
               >
                 <img
                   src={x}
-                  alt="WhatsApp"
+                  alt="YouTube"
                   className="h-6 w-6 hover:opacity-70 transition-opacity"
                 />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1EXbLs77Vi/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -63,7 +63,7 @@ function Footer() {
                 />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/oei.ng?igsh=MTQxeDB3Z3Z2b2IxZw=="
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"

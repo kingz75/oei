@@ -2,8 +2,8 @@ import React from "react";
 
 function Ourstory() {
   // YouTube video ID extracted from the provided URL
-  const YOUTUBE_VIDEO_ID = "bIgNKKU7bpw";
-  
+  const YOUTUBE_VIDEO_ID = "L_MLfp3WVkI";
+
   return (
     <section className="my-[50px] px-[16px]">
       <div className="grid lg:grid-cols-2 gap-12 lg:items-center">
@@ -30,7 +30,12 @@ function Ourstory() {
         {/* Right Side - YouTube Video */}
         <div className="flex justify-center">
           <div className="w-full max-w-xl">
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}> {/* 16:9 Aspect Ratio */}
+            <div
+              className="relative w-full"
+              style={{ paddingBottom: "56.25%" }}
+            >
+              {" "}
+              {/* 16:9 Aspect Ratio */}
               <iframe
                 className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
                 src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1&showinfo=0`}

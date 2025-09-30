@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import main from "../../assets/icons/mainlogo.png";
@@ -6,6 +6,20 @@ import main from "../../assets/icons/mainlogo.png";
 function Header() {
   const [language, setLanguage] = useState("EN");
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    // Cleanup on unmount (important!)
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
     <>
@@ -91,12 +105,8 @@ function Header() {
             </select>
 
             {/* Desktop: Donate */}
-            <div className="hidden md:flex bg-[#ABC452] text-[#182948] text-[16px] py-[10px] px-[14px] font-bold rounded-md items-center justify-center">
-              <NavLink
-               to="/donate"
-              >
-                Donate Now
-              </NavLink>
+            <div className="hidden md:flex bg-[#ABC452] text-[#182948] text-[16px] py-[10px] px-[14px] font-bold rounded-md items-center justify-center hover:shadow-lg hover:translate-y-[-2px] transition">
+              <NavLink to="/donate">Donate Now</NavLink>
             </div>
 
             {/* Mobile Hamburger */}

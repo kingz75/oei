@@ -71,7 +71,7 @@ function Program() {
   const allPrograms = showMore ? [...programs, ...extraPrograms] : programs;
 
   return (
-    <section>
+    <section className="bg-[url('/src/assets/back/aboutbg.png')] bg-no-repeat">
       <div className="lg:pt-[120px] pt-[90px] lg:px-[120px] px-[16px] lg:mb-[75p] mb-[32px] ">
         {/* Section Header */}
         <div className="text-center lg:mb-[60px] mb-[32px]">
