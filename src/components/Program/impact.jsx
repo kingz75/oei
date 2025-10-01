@@ -6,7 +6,6 @@ const ImpactReport = () => {
   return (
     <div>
       <div className="  grid grid-cols-1 lg:grid-cols-2   gap-[40px]  lg:my-[50px] my-[24px] lg:px-[120px] px-[16px] font-dmSans bg-[url('/src/assets/back/impactbg1.png')] ">
-        {/* Left Section - Impact  */}
         <div className="flex flex-col justify-between h-full  ">
           {/* Header */}
           <div className="mb-[10px]">
@@ -91,7 +90,7 @@ const ImpactReport = () => {
 
           {/* Partner Logos */}
           <div className="">
-            <img src={impact} alt=" " className="w-screen" />
+            <img src={impact} alt="" className="w-screen" />
           </div>
         </div>
       </div>
