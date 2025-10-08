@@ -169,7 +169,7 @@ export default function HeroSection() {
                         <h2 className="text-white text-[36px] lg:text-[60px] font-playfair lg:px-[0px] px-[16px] font-bold mb-6 lg:whitespace-pre-line lg:leading-[70px] leading-[54px]">
                           {slide.title}
                         </h2>
-                        <NavLink to="/donate">
+                        <NavLink to="/contact">
                           <button className="bg-[#ABC452] text-[16px] text-[#445700]  px-4 py-3 rounded-md font-bold">
                             {slide.button}
                           </button>

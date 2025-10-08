@@ -176,21 +176,30 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Subject */}
+            {/* ✅ Subject as Dropdown */}
             <div className="flex flex-col space-y-2">
               <label
                 htmlFor="subject"
                 className="text-sm font-medium text-[#061c3d]"
               >
-                Subject
+                Subject <span className="text-red-500">*</span>
               </label>
-              <input
+              <select
                 id="subject"
                 name="subject"
-                type="text"
-                placeholder="Subject"
-                className="w-full px-4 py-3 rounded-md border border-[#e6e8ec] focus:ring-1 focus:ring-[#d0ff2a] focus:outline-none"
-              />
+                required
+                className="w-full px-4 py-3 rounded-md border border-[#e6e8ec] bg-white focus:ring-1 focus:ring-[#d0ff2a] focus:outline-none"
+              >
+                <option value="">Select a subject</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Partnership Request">Partnership Request</option>
+                <option value="Volunteer Opportunity">
+                  Volunteer Opportunity
+                </option>
+                <option value="Donation Support">Donation Support</option>
+
+                <option value="Other">Other</option>
+              </select>
             </div>
 
             {/* Phone */}
@@ -222,7 +231,7 @@ const Contact = () => {
                 id="message"
                 name="message"
                 rows="4"
-                placeholder="Tell us about your project..."
+                placeholder="Tell us more..."
                 className="w-full px-4 py-3 rounded-md border border-[#e6e8ec] focus:ring-1 focus:ring-[#d0ff2a] focus:outline-none"
               ></textarea>
             </div>

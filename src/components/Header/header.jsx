@@ -32,7 +32,7 @@ function Header() {
               <img
                 src={main}
                 alt="main"
-                className="h-10 md:h-12 lg:[14px] cursor-pointer"
+                className="h-10 md:h-12 lg:h-14 cursor-pointer"
               />
             </NavLink>
           </div>

@@ -12,8 +12,8 @@ function Program() {
       title: "Walk Away From Drugs",
       description:
         "A multimedia campaign targeting secondary schools and universities across Nigeria, using drama, storytelling, social media, and real-life testimonials to educate youths on the dangers of drug abuse and how to seek help.",
-      image: "/back/proimage1.png",
-      mobileImage: "/back/proimage1m.png",
+      image: "/back/proimage1.jpg",
+      mobileImage: "/back/proimage1m.jpg",
     },
     {
       id: 2,
@@ -21,8 +21,8 @@ function Program() {
       title: "Medical Outreach",
       description:
         "Provide rural women with access to small loans, savings groups, and business development training. The project also includes financial literacy and cooperative formation to scale impact and sustainability.",
-      image: "/back/proimage2.png",
-      mobileImage: "/back/proimage2m.png",
+      image: "/back/proimage2.jpg",
+      mobileImage: "/back/proimage2m.jpg",
     },
     {
       id: 3,
@@ -30,8 +30,8 @@ function Program() {
       title: "International Day Against Drug Abuse",
       description:
         "Deploy mobile clinics to rural and underserved communities to offer free medical checkups, maternal care, vaccinations, and health education. Services will include basic lab tests and referrals.",
-      image: "/back/proimage3.png",
-      mobileImage: "/back/proimage3m.png",
+      image: "/back/proimage3.jpg",
+      mobileImage: "/back/proimage3m.jpg",
     },
     {
       id: 4,
@@ -39,8 +39,8 @@ function Program() {
       title: "Creatives Lab",
       description:
         "Provide rural women with access to small loans, savings groups, and business development training. The project also includes financial literacy and cooperative formation to scale impact and sustainability.",
-      image: "/back/proimage4.png",
-      mobileImage: "/back/proimage4m.png",
+      image: "/back/proimage4.jpg",
+      mobileImage: "/back/proimage4m.jpg",
     },
   ];
 
@@ -116,14 +116,14 @@ function Program() {
             ))}
           </div>
 
-          <div className="text-center lg:mt-[60px] mt-[32px]">
+          {/* <div className="text-center lg:mt-[60px] mt-[32px]">
             <button
               onClick={() => setShowMore(!showMore)}
               className="bg-[#ABC452] hover:bg-[#8CA53B] text-[#182948] font-bold px-6 py-3 rounded-md transition-colors text-center"
             >
               {showMore ? "View Less" : "View More"}
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
       <Impact />
