@@ -16,7 +16,9 @@ function DrugAbuse() {
     summary1:
       "This movement was more than a march — it was a wake-up call to parents, guardians, youths, and elders alike, highlighting the dangers of drug abuse and the urgent need to protect our future generations.",
     summary2:
-      "Beyond fighting substance abuse, we walked to empower our youths, uplift women, and advance child education. With the strong backing of the NDLEA, we declared with one voice: NO to drugs, YES to a brighter future!",
+      "Beyond fighting substance abuse, we walked to empower our youths, uplift women, and advance child education. With the strong backing of the NDLEA, we declared with one voice:",
+    summary3: " NO to drugs, YES to a brighter future!",
+
     images: [
       "/back/pa1.jpg",
       "/back/pa2.jpg",
@@ -65,6 +67,9 @@ function DrugAbuse() {
         <p className="text-[#555] text-lg leading-7 mb-4">{program.summary}</p>
         <p className="text-[#555] text-lg leading-7 mb-4">{program.summary1}</p>
         <p className="text-[#555] text-lg leading-7 mb-4">{program.summary2}</p>
+        <p className="text-[#555] text-lg leading-7 italic font-semibold mb-4">
+          {program.summary3}
+        </p>
 
         <Link
           to="/program"

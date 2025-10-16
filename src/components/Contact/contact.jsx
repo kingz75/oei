@@ -266,9 +266,7 @@ const Contact = () => {
             </button>
 
             {success === true && (
-              <p className="text-green-600 mt-2">
-                Message sent successfully ✅
-              </p>
+              <p className="text-green-600 mt-2">Message sent successfully</p>
             )}
             {success === false && (
               <p className="text-red-600 mt-2">
